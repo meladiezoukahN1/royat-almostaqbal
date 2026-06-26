@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رؤية المستقبل الحديثة - استيراد الأدوية والمعدات الطبية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/logo.png" />
+  <!-- ربط ملف التنسيقات الخارجي للحركات الاحترافية -->
+  <link rel="stylesheet" href="./assets/css/index.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap");
+
+    body {
+      font-family: "Tajawal", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 overflow-x-hidden">
+  
+  <!-- شاشة التحميل الأولية المتميزة (Premium Preloader) -->
+  <div id="preloader">
+    <img src="./assets/logo.png" alt="رؤية المستقبل" class="h-24 w-24 preloader-logo object-contain" />
+    <div class="heartbeat-line"></div>
+    <span class="mt-4 text-blue-400 font-bold text-lg tracking-wider">رؤية المستقبل الحديثة</span>
+  </div>
+
+  <!-- شريط التنقل (Sticky Glassmorphism Navbar) -->
+  <nav class="bg-white/95 shadow-md sticky top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <div class="h-12 w-12 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-sm transition-transform duration-300 hover:scale-110">
+          <img src="./assets/logo.png" alt="شعار رؤية المستقبل" class="h-full w-full object-contain" />
+        </div>
+        <span class="mr-3 text-xl font-bold text-blue-900 tracking-wide">شركة رؤية المستقبل الحديثة</span>
+      </div>
+
+      <!-- قائمة التنقل لشاشات الكمبيوتر مع تأثيرات التمرير الخطية -->
+      <div class="hidden md:flex space-x-6 space-x-reverse">
+        <a href="#home" class="nav-link text-blue-600 hover:text-blue-800 font-medium">الرئيسية</a>
+        <a href="#about" class="nav-link text-gray-600 hover:text-blue-800 font-medium">عن الشركة</a>
+        <a href="#gallery" class="nav-link text-gray-600 hover:text-blue-800 font-medium">معرض الصور</a>
+        <a href="#contact" class="nav-link text-gray-600 hover:text-blue-800 font-medium">موقعنا</a>
+        <a href="#contactus" class="nav-link text-gray-600 hover:text-blue-800 font-medium">تواصل معنا</a>
+      </div>
+
+      <!-- زر القائمة للموبايل -->
+      <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none" aria-label="فتح القائمة">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- قائمة الجوال المخفية بتأثيرات تمرير رائعة -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t transition-all duration-300">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-3 space-y-reverse">
+        <a href="#home" class="text-blue-600 hover:text-blue-800 font-medium py-2 text-right">الرئيسية</a>
+        <a href="#about" class="text-gray-600 hover:text-blue-800 font-medium py-2 text-right">عن الشركة</a>
+        <a href="#gallery" class="text-gray-600 hover:text-blue-800 font-medium py-2 text-right">معرض الصور</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-800 font-medium py-2 text-right">موقعنا</a>
+        <a href="#contactus" class="text-gray-600 hover:text-blue-800 font-medium py-2 text-right">تواصل معنا</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- القسم الرئيسي بخلفية سينمائية متحركة (Ken Burns Hero Section) -->
+  <section id="home" class="relative min-h-[85vh] py-20 md:py-28 overflow-hidden flex items-center">
+    <!-- الخلفية (الصورة بالتكبير التدريجي + تدرج التعتيم المزدوج) -->
+    <div class="absolute inset-0 overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=1471&q=80"
+        alt="أدوية ومعدات طبية" class="w-full h-full object-cover animate-kenburns" />
+      <!-- طبقة تعتيم غنية مع تدرج لوني يعكس الاحترافية -->
+      <div class="absolute inset-0 bg-gradient-to-l from-slate-950/85 via-slate-900/60 to-transparent"></div>
+    </div>
+
+    <!-- المحتوى فوق الخلفية -->
+    <div class="relative container mx-auto px-4 z-10">
+      <div class="w-full text-center md:text-right text-white">
+        <!-- البادجات بتأثير الظهور التدريجي والنبض -->
+        <div class="flex flex-wrap justify-center md:justify-end gap-2 mb-6 reveal reveal-up">
+          <span class="hero-badge px-4 py-1.5 text-xs font-semibold rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
+            <i class="fas fa-pills text-blue-400 ml-1.5"></i> أدوية أصلية
+          </span>
+          <span class="hero-badge px-4 py-1.5 text-xs font-semibold rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
+            <i class="fas fa-heartbeat text-blue-400 ml-1.5"></i> معدات طبية متطورة
+          </span>
+          <span class="hero-badge px-4 py-1.5 text-xs font-semibold rounded-full bg-white/10 border border-white/20 backdrop-blur-sm">
+            <i class="fas fa-check-circle text-blue-400 ml-1.5"></i> استيراد معتمد
+          </span>
+        </div>
+
+        <!-- العنوان الرئيسي مع تأثير انزلاق للأعلى متدرج -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-snug mb-6 reveal reveal-up delay-100">
+          شركة رؤية المستقبل الحديثة
+          <span class="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl mt-3 text-blue-300 font-bold">
+            لاستيراد الأدوية والمعدات الطبية
+          </span>
+        </h1>
+
+        <!-- الوصف مع تأثير انزلاق للأعلى متدرج -->
+        <p class="text-base sm:text-lg md:text-xl text-slate-200/90 leading-relaxed mb-10 max-w-2xl mx-auto md:ml-0 md:mr-auto reveal reveal-up delay-200">
+          نُوَفِّر أحدث الأدوية والمعدات الطبية بأعلى معايير الجودة، عبر شبكة
+          من الموردين المعتمدين عالمياً، لضمان صحة وسلامة المرضى وتطوير الرعاية الصحية في ليبيا.
+        </p>
+
+        <!-- الأزرار التفاعلية مع تأثيرات لمعان وحركة -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-end reveal reveal-up delay-300">
+          <a href="#contact"
+            class="shiny-btn inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3.5 rounded-xl font-semibold hover:bg-blue-700 transition duration-300 shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-[1.03]">
+            <i class="fas fa-envelope ml-2"></i> تواصل معنا
+          </a>
+          <a href="#gallery"
+            class="inline-flex items-center justify-center bg-white/10 text-white px-8 py-3.5 rounded-xl font-semibold border border-white/30 hover:bg-white/20 transition duration-300 backdrop-blur-sm hover:scale-[1.03]">
+            <i class="fas fa-images ml-2"></i> شاهد المنتجات
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم عن الشركة (About Us Section) - مضاف ومصمم باحترافية كاملة مع حركات تفاعلية -->
+  <section id="about" class="py-24 bg-white overflow-hidden">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        
+        <!-- المحتوى والبيانات (الجانب الأيمن - ينزلق من اليمين) -->
+        <div class="w-full lg:w-1/2 reveal reveal-right">
+          <div class="inline-flex items-center px-4 py-2 bg-blue-50 text-blue-800 rounded-full text-sm font-medium mb-6 shadow-sm">
+            <i class="fas fa-info-circle text-blue-600 ml-2"></i>
+            <span>من نحن؟</span>
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+            شريككم الموثوق في تقديم 
+            <span class="text-blue-600">الرعاية الصحية المتكاملة</span>
+          </h2>
+          
+          <p class="text-gray-600 text-lg leading-relaxed mb-8">
+            تأسست شركة <strong>رؤية المستقبل الحديثة</strong> لتكون رائدة في مجال استيراد وتوزيع الأدوية والمستلزمات الطبية في ليبيا. نحن نربط بين كبرى الشركات الطبية العالمية والمؤسسات الصحية المحلية لتأمين أحدث الحلول العلاجية والأجهزة الطبية المتكاملة.
+          </p>
+          
+          <!-- شبكة المميزات التفاعلية -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="flex items-start transition-transform duration-300 hover:translate-x-[-4px]">
+              <div class="h-10 w-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                <i class="fas fa-shield-alt text-lg"></i>
+              </div>
+              <div class="mr-4">
+                <h3 class="font-bold text-slate-900 mb-1">أعلى معايير الأمان</h3>
+                <p class="text-gray-500 text-sm">جميع الأدوية والمستلزمات خاضعة لرقابة صارمة ومطابقة للمواصفات القياسية.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start transition-transform duration-300 hover:translate-x-[-4px]">
+              <div class="h-10 w-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                <i class="fas fa-shipping-fast text-lg"></i>
+              </div>
+              <div class="mr-4">
+                <h3 class="font-bold text-slate-900 mb-1">توريد سريع وآمن</h3>
+                <p class="text-gray-500 text-sm">سلسلة إمداد مجهزة بأحدث أنظمة التبريد والحفظ الطبي المتقدم.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start transition-transform duration-300 hover:translate-x-[-4px]">
+              <div class="h-10 w-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                <i class="fas fa-handshake text-lg"></i>
+              </div>
+              <div class="mr-4">
+                <h3 class="font-bold text-slate-900 mb-1">شراكات دولية</h3>
+                <p class="text-gray-500 text-sm">تعاقدات ووكالات حصرية مع أفضل المختبرات الطبية حول العالم.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start transition-transform duration-300 hover:translate-x-[-4px]">
+              <div class="h-10 w-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                <i class="fas fa-user-md text-lg"></i>
+              </div>
+              <div class="mr-4">
+                <h3 class="font-bold text-slate-900 mb-1">دعم طبي متكامل</h3>
+                <p class="text-gray-500 text-sm">فريق استشاري وتقني لتدريب وتجهيز غرف العمليات والمختبرات.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- الصورة والبطاقة العائمة (الجانب الأيسر - ينزلق من اليسار) -->
+        <div class="w-full lg:w-1/2 reveal reveal-left relative flex justify-center">
+          <!-- خلفية هالة زرقاء ناعمة للحركة -->
+          <div class="absolute -top-6 -left-6 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+          <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+          
+          <!-- حاوية الصورة بتصميم متميز -->
+          <div class="relative bg-white p-4 rounded-3xl shadow-xl border border-gray-100 max-w-md">
+            <img src="https://images.unsplash.com/photo-1576091160621-2633005a3685?auto=format&fit=crop&w=800&q=80" 
+                 alt="تجهيزات طبية متطورة" 
+                 class="w-full h-80 object-cover rounded-2xl shadow-sm transition-transform duration-500 hover:scale-[1.03]" />
+                 
+            <!-- إحصائية مميزة عائمة -->
+            <div class="absolute -bottom-6 -right-6 bg-blue-600 text-white px-6 py-5 rounded-2xl shadow-xl flex items-center gap-4 border border-blue-500/30 hover:scale-105 transition-transform duration-300">
+              <div class="h-12 w-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
+                <i class="fas fa-award text-yellow-300 animate-bounce"></i>
+              </div>
+              <div>
+                <p class="text-2xl font-bold leading-none">100%</p>
+                <p class="text-xs text-blue-100 mt-1 font-medium">أدوية ومعدات أصلية</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- معرض الصور (Gallery Section with Hover Lift & Glow) -->
+  <section id="gallery" class="py-24 bg-gray-50 overflow-hidden">
+    <div class="container mx-auto px-4">
+      <!-- عنوان القسم -->
+      <div class="text-center mb-16 reveal reveal-up">
+        <h2 class="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">
+          معرض منتجاتنا الطبية
+        </h2>
+        <p class="text-gray-500 max-w-xl mx-auto">
+          نستعرض لكم باقة من أفضل المنتجات والمستلزمات الطبية التي نقوم باستيرادها وتوزيعها في ليبيا.
+        </p>
+      </div>
+
+      <!-- شبكة المعرض ثلاثية الأعمدة مع ظهور متتالي -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- البطاقة 1 -->
+        <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-scale delay-100">
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=800&q=80"
+              alt="أدوية متنوعة" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-semibold bg-blue-600 px-3 py-1 rounded-full">أدوية معتمدة</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">أدوية أصلية</h3>
+            <p class="text-gray-500 text-sm">أدوية مسجلة وخاضعة لأعلى معايير التحليل الطبي العالمي.</p>
+          </div>
+        </div>
+
+        <!-- البطاقة 2 -->
+        <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-scale delay-200">
+          <div class="relative h-60 overflow-hidden">
+            <img src="./assets/img/tools.jpg"
+              alt="معدات طبية" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-semibold bg-blue-600 px-3 py-1 rounded-full">تجهيزات حديثة</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">معدات طبية متطورة</h3>
+            <p class="text-gray-500 text-sm">أجهزة ومستلزمات متطورة للعيادات والعمليات الجراحية الدقيقة.</p>
+          </div>
+        </div>
+
+        <!-- البطاقة 3 -->
+        <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-scale delay-300">
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+              alt="مستشفيات" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-semibold bg-blue-600 px-3 py-1 rounded-full">بنية تحتية</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">تجهيز المستشفيات</h3>
+            <p class="text-gray-500 text-sm">تجهيز غرف الرعاية المركزة والعمليات بأحدث التقنيات السريرية.</p>
+          </div>
+        </div>
+
+        <!-- البطاقة 4 -->
+        <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-scale delay-400">
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=800&q=80"
+              alt="مختبرات" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-semibold bg-blue-600 px-3 py-1 rounded-full">مستلزمات مخبرية</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">مستلزمات المختبرات</h3>
+            <p class="text-gray-500 text-sm">محاليل كيميائية وأدوات دقيقة لدعم مختبرات التحاليل الطبية.</p>
+          </div>
+        </div>
+
+        <!-- البطاقة 5 -->
+        <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-scale delay-500">
+          <div class="relative h-60 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+              alt="أجهزة طبية" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-semibold bg-blue-600 px-3 py-1 rounded-full">تشخيص دقيق</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">أجهزة تشخيصية</h3>
+            <p class="text-gray-500 text-sm">أجهزة سونار، وتخطيط قلب، وأجهزة قياس الضغط والسكري الحديثة.</p>
+          </div>
+        </div>
+
+        <!-- البطاقة 6 -->
+        <div class="gallery-card bg-white rounded-2xl overflow-hidden shadow-md reveal reveal-scale delay-600">
+          <div class="relative h-60 overflow-hidden">
+            <img src="./assets/img/services.jpg"
+              alt="خدمات صحية" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <span class="text-white text-xs font-semibold bg-blue-600 px-3 py-1 rounded-full">تكامل الخدمات</span>
+            </div>
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold text-lg text-slate-800 mb-2">خدمات صحية متكاملة</h3>
+            <p class="text-gray-500 text-sm">توفير الدعم المستمر وقطع الغيار والصيانة الدورية للمعدات.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الاتصال والموقع (Location Section with Map and Labeled Container) -->
+  <section id="contact" class="py-24 bg-blue-50/50 overflow-hidden">
+    <div class="container mx-auto px-4">
+      
+      <!-- النصوص والتفاصيل -->
+      <div class="text-center mb-12 reveal reveal-up">
+        <div class="inline-flex items-center px-4 py-2 bg-blue-100/60 text-blue-800 rounded-full text-sm font-medium mb-4">
+          <i class="fas fa-map-marked-alt text-blue-600 ml-2 animate-pulse"></i>
+          <span>أين تجدنا؟</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-bold text-blue-950 mb-4">
+          موقعنا الرئيسي
+        </h2>
+        <p class="text-gray-700 text-lg font-medium">
+          <i class="fas fa-map-marker-alt text-red-500 ml-2 animate-bounce"></i>
+          ليبيا، طرابلس - منطقة صلاح الدين
+        </p>
+      </div>
+
+      <!-- حاوية الخريطة بتأثير ثلاثي الأبعاد وانحناءات متميزة -->
+      <div class="max-w-5xl mx-auto reveal reveal-up delay-200">
+        <div class="overflow-hidden shadow-xl rounded-3xl border border-blue-200/40 bg-white p-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d32282.204044125506!2d13.109383279126752!3d32.855898077584846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a7690c6ccc3029%3A0x7fe6b34f891e8660!2z2KfZhNiq2YbYqSDYp9mE2YXYs9iq2Ycg2KfZhNi52YrYqNmK2YY!5e0!3m2!1sar!2sly!4v1712345678901!5m2!1sar!2sly"
+            width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            class="rounded-2xl"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- الفوتر (Premium Animated Footer) -->
+  <footer class="bg-slate-950 text-slate-300 pt-20 pb-8" id="contactus">
+    <div class="container mx-auto px-4">
+      <!-- شبكة الفوتر الرئيسية -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 text-sm md:text-base mb-16 border-b border-slate-800 pb-16">
+        
+        <!-- العمود الأول: الشعار والنبذة (ينزلق للأعلى) -->
+        <div class="space-y-6 reveal reveal-up">
+          <div class="flex items-center">
+            <div class="h-12 w-12 bg-white rounded-2xl flex items-center justify-center text-blue-900 font-extrabold text-2xl shadow-md overflow-hidden p-1.5 transition-transform duration-300 hover:rotate-12">
+              <img src="./assets/ROYAL.png" alt="شعار رؤية المستقبل" class="w-full h-full object-contain" />
+            </div>
+            <div class="mr-3">
+              <p class="text-xl font-bold text-white">رؤية المستقبل</p>
+              <p class="text-xs text-blue-400 font-medium">لاستيراد الأدوية والمعدات الطبية</p>
+            </div>
+          </div>
+          <p class="text-slate-400 leading-relaxed text-right text-base">
+            شركة رائدة في استيراد وتوزيع الأدوية والمعدات الطبية في ليبيا، نلتزم بتوفير منتجات عالية الجودة والموثوقية من كبرى المصانع والشركات العالمية.
+          </p>
+        </div>
+
+        <!-- العمود الثاني: الروابط السريعة (ينزلق للأعلى بتأخير) -->
+        <div class="space-y-6 reveal reveal-up delay-100">
+          <h3 class="text-lg font-bold text-white relative pr-4">
+            <span class="absolute right-0 top-0 bottom-0 w-1 bg-blue-600 rounded"></span>
+            روابط سريعة
+          </h3>
+          <ul class="grid grid-cols-2 gap-4 text-slate-400 text-base">
+            <li class="flex items-center hover:translate-x-[-6px] transition-transform duration-300">
+              <i class="fas fa-chevron-left text-blue-500 text-xs ml-2"></i>
+              <a href="#home" class="hover:text-white transition-colors">الرئيسية</a>
+            </li>
+            <li class="flex items-center hover:translate-x-[-6px] transition-transform duration-300">
+              <i class="fas fa-chevron-left text-blue-500 text-xs ml-2"></i>
+              <a href="#about" class="hover:text-white transition-colors">عن الشركة</a>
+            </li>
+            <li class="flex items-center hover:translate-x-[-6px] transition-transform duration-300">
+              <i class="fas fa-chevron-left text-blue-500 text-xs ml-2"></i>
+              <a href="#gallery" class="hover:text-white transition-colors">معرض الصور</a>
+            </li>
+            <li class="flex items-center hover:translate-x-[-6px] transition-transform duration-300">
+              <i class="fas fa-chevron-left text-blue-500 text-xs ml-2"></i>
+              <a href="#contact" class="hover:text-white transition-colors">موقعنا</a>
+            </li>
+            <li class="flex items-center hover:translate-x-[-6px] transition-transform duration-300">
+              <i class="fas fa-chevron-left text-blue-500 text-xs ml-2"></i>
+              <a href="#contactus" class="hover:text-white transition-colors">تواصل معنا</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- العمود الثالث: بيانات الاتصال (ينزلق للأعلى بتأخير مضاعف) -->
+        <div class="space-y-6 reveal reveal-up delay-200">
+          <h3 class="text-lg font-bold text-white relative pr-4">
+            <span class="absolute right-0 top-0 bottom-0 w-1 bg-blue-600 rounded"></span>
+            بيانات الشركة
+          </h3>
+          <ul class="space-y-4 text-slate-400 text-base">
+            <li class="flex items-start group">
+              <i class="fas fa-map-marker-alt text-blue-500 mt-1 ml-3 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+              <div>
+                <p class="font-semibold text-slate-200">العنوان:</p>
+                <p class="text-sm mt-0.5">طرابلس، صلاح الدين، ليبيا</p>
+              </div>
+            </li>
+
+            <li class="flex items-start group">
+              <i class="fas fa-phone text-blue-500 mt-1 ml-3 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+              <div>
+                <p class="font-semibold text-slate-200">الهواتف المعتمدة:</p>
+                <p class="text-sm mt-0.5 font-mono">0911141506</p>
+                <p class="text-sm font-mono">0916501609</p>
+              </div>
+            </li>
+
+            <li class="flex items-start group">
+              <i class="fas fa-fax text-blue-500 mt-1 ml-3 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+              <div>
+                <p class="font-semibold text-slate-200">الفاكس:</p>
+                <p class="text-sm mt-0.5 font-mono">0021831620435</p>
+              </div>
+            </li>
+
+            <li class="flex items-start group">
+              <i class="fas fa-envelope text-blue-500 mt-1 ml-3 flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+              <div>
+                <p class="font-semibold text-slate-200">البريد الإلكتروني:</p>
+                <p class="text-sm mt-0.5 break-all font-mono hover:text-white transition-colors">Samiub83@gmail.com</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- حقوق الملكية والتحكيم الفني السفلي -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-500">
+        <p class="text-center md:text-right">
+          جميع الحقوق محفوظة &copy; <span id="copyright-year" class="font-semibold text-slate-400">2025</span> رؤية المستقبل الحديثة.
+        </p>
+        <div class="flex items-center justify-center md:justify-start gap-2 text-slate-400">
+          <span>تم تصميم وتطوير الموقع بواسطة</span>
+          <a href="https://octobits.ly" target="_blank" class="flex items-center gap-1.5 font-semibold text-blue-400 hover:text-blue-300 transition-colors duration-300">
+            <img src="./assets/img/octobits.png" alt="Octobits" class="h-4 w-auto object-contain inline-block" onerror="this.style.display='none'" />
+            <span>octobits</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- زر العودة للأعلى الذكي المطور (Smart Scroll to Top) -->
+  <a href="#home" id="scroll-to-top" class="scroll-top-btn" aria-label="العودة للأعلى">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- زر واتساب العائم التفاعلي الفريد (Floating Pulse WhatsApp Widget) -->
+  <a href="https://wa.me/218911141506" target="_blank" class="whatsapp-float" aria-label="تواصل معنا عبر واتساب">
+    <!-- التموجات النبضية خلف الزر -->
+    <div class="whatsapp-ripple"></div>
+    <div class="whatsapp-ripple"></div>
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">تواصل معنا مباشرة!</span>
+  </a>
+
+  <!-- محرك الحركات وتفاعلية الصفحة (JavaScript Animations & Core Engine) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      
+      // تحديث سنة حقوق الملكية تلقائياً
+      const copyrightYearEl = document.getElementById("copyright-year");
+      if (copyrightYearEl) {
+        copyrightYearEl.textContent = new Date().getFullYear();
+      }
+
+      // 1. نظام إخفاء شاشة التحميل (Preloader Dismissal)
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        if (preloader) {
+          preloader.classList.add("fade-out");
+          // تفعيل فحص التمرير فور التحميل لظهور أول عناصر الصفحة
+          setTimeout(revealOnScroll, 150);
+        }
+      });
+      // كضمان إضافي في حال تأخر تحميل الموارد الخارجية الكبيرة جداً
+      setTimeout(function() {
+        const preloader = document.getElementById("preloader");
+        if (preloader && !preloader.classList.contains("fade-out")) {
+          preloader.classList.add("fade-out");
+          setTimeout(revealOnScroll, 100);
+        }
+      }, 3000);
+
+      // 2. محرك ظهور العناصر التدريجي عند التمرير (Scroll-Reveal Engine)
+      const revealElements = document.querySelectorAll(".reveal");
+      
+      function revealOnScroll() {
+        // فحص يدوي للحاسوب والموبايل كبديل واحتياطي
+        revealElements.forEach(el => {
+          if (el.classList.contains("active")) return; // تم تفعيل الحركة مسبقاً
+          
+          const rect = el.getBoundingClientRect();
+          const triggerHeight = window.innerHeight * 0.88; // تفعيل عند ظهور 12% من العنصر
+          
+          if (rect.top < triggerHeight) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      // تفعيل الـ Intersection Observer في المتصفحات الحديثة لأداء خارق 60fps
+      if ("IntersectionObserver" in window) {
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -60px 0px"
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+              observer.unobserve(entry.target); // إيقاف المراقبة بعد الحركة لتوفير الرام
+            }
+          });
+        }, observerOptions);
+        
+        revealElements.forEach(el => observer.observe(el));
+      } else {
+        // بديل للمتصفحات القديمة
+        window.addEventListener("scroll", revealOnScroll);
+      }
+
+      // 3. التفاعلية مع شريط التنقل وزر الصعود للأعلى (Sticky Navbar & Smart Back-to-Top)
+      const navbar = document.querySelector("nav");
+      const scrollTopBtn = document.getElementById("scroll-to-top");
+      
+      window.addEventListener("scroll", function () {
+        const scrollPos = window.scrollY;
+        
+        // تأثير تقلص وشفافية النافبار
+        if (scrollPos > 50) {
+          navbar.classList.add("nav-scrolled");
+        } else {
+          navbar.classList.remove("nav-scrolled");
+        }
+        
+        // إظهار/إخفاء زر العودة للأعلى
+        if (scrollPos > 450) {
+          scrollTopBtn.classList.add("show");
+        } else {
+          scrollTopBtn.classList.remove("show");
+        }
+      });
+
+      // 4. التحكم في القائمة الجانبية للجوال (Mobile Menu)
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = mobileMenuButton.querySelector("i");
+
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        if (mobileMenu.classList.contains("hidden")) {
+          menuIcon.className = "fas fa-bars text-xl transition-all duration-300";
+        } else {
+          menuIcon.className = "fas fa-times text-xl transition-all duration-300";
+        }
+      });
+
+      // إغلاق قائمة الجوال عند الضغط على الروابط
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", function () {
+          mobileMenu.classList.add("hidden");
+          menuIcon.className = "fas fa-bars text-xl";
+        });
+      });
+
+      // إغلاق قائمة الموبايل عند النقر خارجها
+      document.addEventListener("click", function (event) {
+        if (
+          !mobileMenu.contains(event.target) &&
+          !mobileMenuButton.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+          menuIcon.className = "fas fa-bars text-xl";
+        }
+      });
+
+      // 5. تأثير التمرير السلس للروابط (Smooth Scroll Polyfill)
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const targetID = this.getAttribute("href");
+          if (targetID === "#") return;
+          
+          e.preventDefault();
+          const targetElement = document.querySelector(targetID);
+          
+          if (targetElement) {
+            // حساب الإزاحة الخاصة بالنافبار المثبت لتجنب حجب العناوين
+            const navbarHeight = navbar.offsetHeight;
+            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight + 5;
+            
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth"
+            });
+          }
+        });
+      });
+
+    });
+  </script>
+</body>
+
+</html>

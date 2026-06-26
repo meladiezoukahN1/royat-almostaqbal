@@ -1,0 +1,381 @@
+/* ==========================================
+   Premium Animations & Core Design Tokens
+   ========================================== */
+
+/* 1. تأثير شاشة التحميل (Premium Preloader) */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0f172a; /* Slate 900 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* نبض الشعار بشكل نبضات القلب الطبية */
+@keyframes heartbeat {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(59, 130, 246, 0)); }
+  14% { transform: scale(1.08); filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6)); }
+  28% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(59, 130, 246, 0)); }
+  42% { transform: scale(1.08); filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.6)); }
+  70% { transform: scale(1); filter: drop-shadow(0 0 0px rgba(59, 130, 246, 0)); }
+}
+
+.preloader-logo {
+  animation: heartbeat 2s infinite ease-in-out;
+}
+
+/* خط نبض القلب الطبي ثلاثي الأبعاد */
+.heartbeat-line {
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #3b82f6 50%, transparent 100%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
+.heartbeat-line::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 100%;
+  background: #ffffff;
+  position: absolute;
+  left: -50px;
+  animation: heartbeat-flow 1.5s infinite linear;
+}
+
+@keyframes heartbeat-flow {
+  0% { left: -50px; }
+  100% { left: 150px; }
+}
+
+/* 2. شريط التنقل الزجاجي الذكي (Glassmorphism Navbar) */
+nav {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-scrolled {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08) !important;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* خط متحرك تحت الروابط عند التمرير (RTL Slide) */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  transform: scaleX(0);
+  transform-origin: right; /* انزلاق من اليمين إلى اليسار للغة العربية */
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* تأثير زر القائمة للموبايل */
+#mobile-menu-button {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#mobile-menu-button:hover {
+  transform: scale(1.1);
+}
+
+#mobile-menu a {
+  transition: all 0.3s ease;
+  border-right: 3px solid transparent;
+}
+
+#mobile-menu a:hover {
+  border-right-color: #2563eb;
+  padding-right: 16px;
+  background-color: rgba(37, 99, 235, 0.04);
+}
+
+/* 3. تأثير زووم سينمائي للقسم الرئيسي (Ken Burns Hero Effect) */
+@keyframes kenburns {
+  0% { transform: scale(1) translate(0, 0); }
+  50% { transform: scale(1.08) translate(-1%, -0.5%); }
+  100% { transform: scale(1.15) translate(0.5%, 0.5%); }
+}
+
+.animate-kenburns {
+  animation: kenburns 25s infinite alternate ease-in-out;
+}
+
+/* 4. زر واتساب عائم تفاعلي (Floating Pulse WhatsApp Widget) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1) translateY(-6px);
+  box-shadow: 0 15px 30px rgba(37, 211, 102, 0.5);
+}
+
+/* التموجات النبضية المزدوجة خلف الزر */
+.whatsapp-ripple {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(37, 211, 102, 0.4);
+  border-radius: 50%;
+  z-index: -1;
+  animation: ripple 2.4s infinite ease-out;
+  pointer-events: none;
+}
+
+.whatsapp-ripple:nth-child(2) {
+  animation-delay: 0.8s;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* تلميح أنيق يظهر فوق زر واتساب */
+.whatsapp-tooltip {
+  position: absolute;
+  bottom: 75px;
+  right: -10px;
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+  pointer-events: none;
+}
+
+.whatsapp-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 32px;
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: #0f172a transparent transparent;
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 5. زر الصعود للأعلى التفاعلي */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background-color: #2563eb;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.4);
+}
+
+/* 6. تأثيرات البطاقات في المعرض (Premium Hover Lift & Glow) */
+.gallery-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+}
+
+.gallery-card img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px -12px rgba(37, 99, 235, 0.16) !important;
+  border-color: rgba(147, 197, 253, 0.5);
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/* مؤشر مضيء في الأعلى عند الوقوف على البطاقة */
+.gallery-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* 7. نظام الظهور التدريجي عند التمرير (Scroll-Reveal Engine) */
+.reveal {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-up {
+  transform: translateY(50px);
+}
+
+.reveal-down {
+  transform: translateY(-50px);
+}
+
+.reveal-left {
+  transform: translateX(-50px);
+}
+
+.reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+/* الفئة التي يتم تفعيلها عبر JS عند دخول العنصر للشاشة */
+.active.reveal {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* تأخير متتالي (Staggered Delays) للحركات المتتابعة */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+.delay-800 { transition-delay: 800ms; }
+
+/* 8. تأثيرات نصوص وأزرار البطل (Hero Interactive Elements) */
+.hero-badge {
+  animation: badgePulse 3s infinite alternate ease-in-out;
+}
+
+@keyframes badgePulse {
+  0% { border-color: rgba(255, 255, 255, 0.2); background-color: rgba(255, 255, 255, 0.12); }
+  100% { border-color: rgba(96, 165, 250, 0.4); background-color: rgba(96, 165, 250, 0.18); }
+}
+
+/* تأثير لمعان خفيف على زر "تواصل معنا" */
+.shiny-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shiny-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: none;
+}
+
+.shiny-btn:hover::before {
+  animation: shine 1.2s ease-in-out;
+}
+
+@keyframes shine {
+  100% {
+    left: 150%;
+  }
+}
